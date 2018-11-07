@@ -1,0 +1,32 @@
+{
+  "name": "@mike-north/js-lib-renovate-config",
+  "version": "0.0.1",
+  "description": "Renovate bot sharable config for JS libraries",
+  "repository": "https://github.com/mike-north/js-lib-renovate-config",
+  "author": "Mike North (https://mike.works) <michael.l.north@gmail.com>",
+  "license": "MIT",
+  "renovate-config": {
+    "default": {
+      "extends": [
+        "config:js-lib",
+        ":pinOnlyDevDependencies",
+        ":automergePatch",
+        ":automergeMinor",
+        ":semanticCommits"
+      ],
+      "packageRules": [
+        {
+          "packageNames": [
+            "^@types",
+            "typescript",
+            "tslint",
+            "typedoc"
+          ],
+          "minor": {
+            "automerge": false
+          }
+        }
+      ]
+    }
+  }
+}
