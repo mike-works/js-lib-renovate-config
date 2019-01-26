@@ -26,6 +26,7 @@
         ":automergeMinor",
         ":semanticCommits"
       ],
+      "lockFileMaintenance": true,
       "packageRules": [
         {
           "packageNames": [
